@@ -20,8 +20,8 @@ export default function MediaDetails() {
 
       try {
         setLoading(true)
-        const API_URL = process.env.NEXT_PUBLIC_TMDB_BASE_URL
-        const API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY
+        const API_URL = "https://api.themoviedb.org/3"
+        const API_KEY = "2fe408437718450821030bd3782f312b"
 
         const mediaRes = await axios.get(
           `${API_URL}/${type}/${id}?api_key=${API_KEY}`
@@ -66,7 +66,7 @@ export default function MediaDetails() {
       <div
         className="h-96 bg-cover bg-center relative"
         style={{
-          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/original${media.backdrop_path})`
+          backgroundImage: `url(${"https://image.tmdb.org/t/p"}/original${media.backdrop_path})`
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
@@ -76,7 +76,7 @@ export default function MediaDetails() {
         <div className="flex flex-col md:flex-row">
           <div className="md:w-1/3 flex justify-center">
             <img
-              src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/w500${media.poster_path}`}
+              src={`${"https://image.tmdb.org/t/p"}/w500${media.poster_path}`}
               alt={media.title || media.name}
               className="rounded-lg shadow-lg w-64"
             />

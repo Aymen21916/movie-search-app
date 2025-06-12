@@ -196,7 +196,7 @@ export default function MovieListManager({ onAddToList, activeMovie }) {
               <div key={movie.id} className="flex items-center bg-white rounded-lg shadow p-3">
                 <div className="flex-shrink-0 mr-4">
                   <img 
-                    src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/w92${movie.poster_path}`} 
+                    src={`${"https://image.tmdb.org/t/p"}/w92${movie.poster_path}`} 
                     alt={movie.title || movie.name} 
                     className="w-16 h-24 object-cover rounded"
                   />

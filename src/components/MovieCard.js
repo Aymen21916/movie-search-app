@@ -3,7 +3,7 @@ import { FaStar } from 'react-icons/fa'
 
 export default function MovieCard({ item }) {
   const imageUrl = item.poster_path 
-    ? `${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/w500${item.poster_path}`
+    ? `${"https://image.tmdb.org/t/p"}/w500${item.poster_path}`
     : '/no-image.png'
 
   return (

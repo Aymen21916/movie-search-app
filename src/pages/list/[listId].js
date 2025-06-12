@@ -108,7 +108,7 @@ export default function ListViewPage() {
                   <div className="flex">
                     <div className="w-1/3">
                       <img 
-                        src={`${process.env.NEXT_PUBLIC_IMAGE_BASE_URL}/w500${movie.poster_path}`} 
+                        src={`${"https://image.tmdb.org/t/p"}/w500${movie.poster_path}`} 
                         alt={movie.title || movie.name} 
                         className="w-full h-full object-cover"
                       />
